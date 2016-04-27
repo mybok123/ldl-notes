@@ -1,0 +1,8 @@
+{
+	"name":"my-demo-express",
+	"version":"0.0.1",
+	"dependencies":{
+		"express":"4.13.4",
+		"ejs":"2.4.1"
+	}
+}
