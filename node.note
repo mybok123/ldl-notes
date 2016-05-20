@@ -1,0 +1,5 @@
+## 占位符
+function sayHi(name) {
+  return `How are you, ${name}?`;
+}
+注意return 后面是` ,tab键上面的输入
