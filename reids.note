@@ -78,9 +78,13 @@ nohup redis-server
   连接
   var redis = require('redis');
   
-  var redis-client = redis.createClient();
+  client = redis.createClient(6379, '127.0.0.1');
+
+  client.on('error', function (err) {
+    console.log('Error ' + err);
+  });
   
-  redis-client.set('my key' ,'my value' ,function (err) {
+  client.set('my key' ,'my value' ,function (err) {
     //...
   }); //客户端将所有redis命令都用函数的方式提供出来，其他smembers,hexists 等命令用法使用相同方式
   
