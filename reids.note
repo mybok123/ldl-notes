@@ -1,0 +1,19 @@
+### 安装
+brew install redis
+
+### 开启服务
+nohup redis-server
+
+### 客户端连接
+  redis-cli
+
+### 获取所有的key 键
+  keys *
+
+### 设置一个key
+  set ldl.key1 abcckfjlka
+
+### 获取一个key对应的值
+  get ldl.key1  // abcckfjlka
+
+###
