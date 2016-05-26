@@ -1,2 +1,7 @@
 ### 在后台运行进程 注意 nohup 和 &
  nohup java -jar edb_SDK_V0_0_1.jar &
+ 
+### 查看后台java进程
+ ps -ef | grep java
+
+### 
