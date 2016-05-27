@@ -1,6 +1,6 @@
 ## centOS 服务器部署node环境
 
-如果是新的阿里云服务器，使用root用户登陆，终端输入：
+init
 
 ```
 ssh root@ip
