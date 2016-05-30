@@ -14,3 +14,7 @@
 ```
  
 启动服务 sslocal -c ~/showdow.config    其中 .config是自定义的配置文件
+
+### 启动浏览器
+
+google-chrome --proxy-server="socks5://localhost:7077"
