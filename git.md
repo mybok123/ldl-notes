@@ -1,4 +1,11 @@
-md### copy from mvn -> http://mwn-notes.github.io/git/
+
+## 重置到某个提交点
+> git reset --hard 820a19d0081106d61b9cbb28317ab8c1fa27d954
+
+
+
+
+### copy from mvn -> http://mwn-notes.github.io/git/
 
 1. 起步
 1.1. 安装
