@@ -15,3 +15,17 @@ function sayHi(name) {
 > 安装 ：npm install -g gitbook-cli
 > 使用 : gitbook serve
 
+### 私有仓库使用 @i5ting/hz-dao-billing
+
+> nrm use npm
+
+> npm login
+
+> npm run dao
+
+> npm start 或 npm publish
+
+> 重新发布 先glup ，将版本号+1
+
+
+
