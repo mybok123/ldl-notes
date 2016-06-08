@@ -104,6 +104,73 @@ console.log(5);
 
 > 输出值为1、2、5、2++、1++、ni shi so ..
 
+
+#### Promise.map()
+
+```
+var q = [2000,1000,1,500];
+
+Promise.map(q,function (listno){
+  return new Promise(function (resolve,reject) {
+    setTimeout(function () {
+      console.log(listno);
+      resolve();
+    },listno);
+  })
+}).then(function () {
+  console.log(4);
+})
+.catch(function (err) {
+  console.log(err);
+});
+
+console.log(5);
+
+```
+
+> 输出值是5、1、500、1000、2000、4
+
+#### Promise.race() 竞速 - 任何一个成功，即resolve
+
+```
+
+var q = [];
+
+q.push(
+  new Promise(function (resolve,reject) {
+    console.log(1);
+    setTimeout(function () {
+      console.log('1++');
+      resolve();
+    },2000);
+  })
+);
+
+q.push(
+  new Promise(function (resolve,reject) {
+    console.log(2);
+    setTimeout(function () {
+      console.log('2++');
+      resolve();
+    },1000);
+  })
+);
+
+Promise.race(q).then(function () {
+  console.log(4);
+})
+.catch(function (err) {
+  console.log(err);
+});
+
+console.log(5);
+
+```
+
+> 输出值 1、2、5、2++、4、1++
+
+
+
 ## centOS 服务器部署node环境
 
 init
