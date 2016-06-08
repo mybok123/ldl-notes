@@ -27,5 +27,80 @@ function sayHi(name) {
 
 > 重新发布 先glup ，将版本号+1
 
+## Promise
+
+> 附 官网api地址 [link](http://bluebirdjs.com/docs/api-reference.html)
+
+### Promise.all()
+> Promise.all()
+```
+var q = [];
+ 
+q.push(
+  new Promise(function (resolve,reject) {
+    console.log(1);
+    setTimeout(function () {
+      console.log('1++');
+      resolve();
+    },2000);
+  })
+);
+
+q.push(
+  new Promise(function (resolve,reject) {
+    console.log(2);
+    setTimeout(function () {
+      console.log('2++');
+      resolve();
+    },1000);
+  })
+);
+
+Promise.all(q).then(function () {
+  console.log(4);
+});
+
+console.log(5);
+```
+> 输出顺序1、2、5、2++、1++、4
+> 其中的两个resolve是必须，否则不能打印4
+
+### Promise.resolve() & Promise.reject()
+```
+var q = [];
+
+q.push(
+  new Promise(function (resolve,reject) {
+    console.log(1);
+    setTimeout(function () {
+      console.log('1++');
+      reject('ni shi so ..');
+    },2000);
+  })
+);
+
+q.push(
+  new Promise(function (resolve,reject) {
+    console.log(2);
+    setTimeout(function () {
+      console.log('2++');
+      resolve();
+    },1000);
+  })
+);
+
+Promise.all(q).then(function () {
+  console.log(4);
+})
+.catch(function (err) {
+  console.log(err);
+});
+
+console.log(5);
+```
+
+> 输出值为1、2、5、2++、1++、ni shi so ..
+
+
 
 
